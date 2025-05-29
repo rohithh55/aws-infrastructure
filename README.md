@@ -6,7 +6,7 @@ After weeks of testing and optimization, I’ve built a secure, scalable AWS env
 
 Public subnets with Nginx reverse proxies (DDoS protection + SSL termination)
 
-Private subnets for backend servers (isolated from direct internet access)
+Private subnets for backend servers (isolated from direct internet access) 
 
 Fine-grained security groups following zero-trust principles
 
