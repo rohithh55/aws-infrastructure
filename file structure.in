@@ -1,48 +1,48 @@
+🚀 Terraform AWS Lab - Documentation
+📋 Overview
+This Terraform project implements a multi-tier AWS infrastructure with the following components:
+
+VPC with public and private subnets across two availability zones
+Load balancers for traffic distribution
+Proxy servers in public subnets
+Backend web servers in private subnets
+Security groups for access control
+Remote state management with S3 and DynamoDB
+
+📁 Structure
+```tree
 terraform-aws/
 ├── main.tf
 ├── variables.tf
 ├── outputs.tf
 ├── backend.tf
 ├── terraform.tfvars.example
-├── README.md
-├── server_ips.txt
-├── images/
-│   ├── architecture.png
-│   ├── vpc.png
-│   ├── external_lb.png
-│   ├── internal_lb.png
-│   ├── s3_bucket.png
-│   ├── ec2_instances.png
-│   ├── target_groups.png
-│   ├── security_groups.png
-│   ├── test_external_lb.mp4
-│   ├── test_server1.png
-│   └── test_server2.png
-└── modules/
-    ├── backend/
-    │   ├── main.tf
-    │   └── variables.tf
-    ├── ec2/
-    │   ├── main.tf
-    │   ├── outputs.tf
-    │   └── variables.tf
-    ├── elb/
-    │   ├── main.tf
-    │   ├── outputs.tf
-    │   └── variables.tf
-    ├── internal-alb/
-    │   ├── main.tf
-    │   ├── outputs.tf
-    │   └── variables.tf
-    ├── security_group/
-    │   ├── main.tf
-    │   ├── outputs.tf
-    │   └── variables.tf
-    ├── subnet/
-    │   ├── main.tf
-    │   ├── outputs.tf
-    │   └── variables.tf
-    └── vpc/
-        ├── main.tf
-        ├── outputs.tf
-        └── variables.tf
+├── modules
+│   ├── backend
+│   │   ├── main.tf
+│   │   └── variables.tf
+│   ├── ec2
+│   │   ├── main.tf
+│   │   ├── outputs.tf
+│   │   └── variables.tf
+│   ├── elb
+│   │   ├── main.tf
+│   │   ├── outputs.tf
+│   │   └── variables.tf
+│   ├── internal-alb
+│   │   ├── main.tf
+│   │   ├── outputs.tf
+│   │   └── variables.tf
+│   ├── security_group
+│   │   ├── main.tf
+│   │   ├── outputs.tf
+│   │   └── variables.tf
+│   ├── subnet
+│   │   ├── main.tf
+│   │   ├── outputs.tf
+│   │   └── variables.tf
+│   └── vpc
+│       ├── main.tf
+│       ├── outputs.tf
+│       └── variables.tf
+└── README.md
