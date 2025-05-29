@@ -96,26 +96,18 @@ main.tf
 
 🧩 Architecture Components
 
-🧩 Architecture Components
-
-VPC Isolated AWS network environment.
-
-Internet gateway(IGW) Connects VPC to the internet; enables
-
-Public Subnets Host internet-facing resources (e.g., Bastion Host)
-
-Private subnets Host internal resources like application servers
-
-Route Tables Routes traffic appropriately (public → IGW, private → NAT Gateway)
-
-NAT Gateway Allows private subnet instances outbound internet access securely
-
-Elastic IP Static IP assigned to NAT Gateway for stable connectivity
-
-Security Groups Virtual firewalls controlling inbound/outbound traffic
-
-Nginx Instances Reverse proxy servers located in public subnets.Apache Backend InstancesWeb servers located in private subnets.Load BalancerDistributes incoming traffic for fault tolerance and high availability.
-
+Component	Description
+VPC	Isolated AWS network environment.
+Internet Gateway (IGW)	Connects VPC to the internet; enables public subnet connectivity.
+Public Subnets	Host internet-facing resources (e.g., Bastion Host).
+Private Subnets	Host internal resources like application servers.
+Route Tables	Routes traffic appropriately (public → IGW, private → NAT Gateway).
+NAT Gateway	Allows private subnet instances outbound internet access securely.
+Elastic IP	Static IP assigned to NAT Gateway for stable connectivity.
+Security Groups	Virtual firewalls controlling inbound/outbound traffic.
+Nginx Instances	Reverse proxy servers located in public subnets.
+Apache Backend Instances	Web servers located in private subnets.
+Load Balancer	Distributes incoming traffic for fault tolerance and high availability.
 🔗 Key Features
 
 Modular Design: All infrastructure components are organized into reusable modules
@@ -129,5 +121,15 @@ Remote Exec: Automatic configuration of reverse proxies
 Output Management: All server IPs saved to a local file
 
 Complete Automation: All configuration done through Terraform
+✒️ Outputs
+After successful deployment:
 
-📐 Architecture Diagram:
+VPC ID
+
+Subnet IDs (public and private)
+
+Security Group IDs
+
+Load Balancer DNS names
+
+EC2 instance IPs (public and private)
