@@ -2,6 +2,7 @@
 📋 Overview
 This Terraform project implements a multi-tier AWS infrastructure with the following components:
 
+
 VPC with public and private subnets across two availability zones
 Load balancers for traffic distribution
 Proxy servers in public subnets
